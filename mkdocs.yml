@@ -1,0 +1,92 @@
+site_name: My Documentation
+site_url: https://spiderpie.github.io/
+
+copyright: "Used by spiderpie. Credits: Written with love by StephanGR"
+
+repo_name: spiderpie/spiderpie.github.io
+repo_url: https://github.com/spiderpie/spiderpie.github.io
+
+
+theme:
+  name: material
+  include_search_page: false
+  search_index_only: true
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.sections
+    - navigation.instant
+    - navigation.instant.progress
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - navigation.footer
+    - navigation.expand
+    - navigation.path
+    - toc.follow
+    - toc.integrate
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: orange
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: orange
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Rubik
+    code: Rubik Mono
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/spiderpie
+
+plugins:
+  - search:
+      lang: 'en'
+  - awesome-pages
+  - meta-descriptions
+  - external-markdown
+  - minify:
+      minify_html: true
+      htmlmin_opts:
+        remove_comments: true
+  - ezlinks
+  - progress
+  - git-revision-date-localized:
+      type: timeago
+      enable_creation_date: true
+  - social
+  - git-authors:
+      sort_authors_by: contribution
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
